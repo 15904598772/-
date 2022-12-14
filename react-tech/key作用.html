@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        当数据发生变化时，react会根据数据变化生成新的虚拟dom，并将新的虚拟dom和旧的虚拟dom进行对比，规则如下
+
+        a：若新的虚拟dom列表中的key和旧的虚拟dom列表中的key值不相等时
+            如果虚拟dom中的值不变，则仍旧采用旧的真实dom
+            如果虚拟dom中的值变化，则将新的虚拟dom渲染成真实dom展示
+
+        b：若新的虚拟dom中key值与旧的虚拟domkey值相等
+            则直接采用旧的真实dom
+     -->
+     <!-- 
+        key值要采用唯一标识，不要用索引index
+            若用index，可能会导致重复渲染，效率降低，
+            以及结构中有输入型dom，可能会导致界面错乱
+      -->
+
+      <!-- 
+         当正在更新已渲染过的元素列表时，它默认用“就地复用”策略。
+         如果数据项的顺序被改变，将不会移动 DOM 元素来匹配数据项的顺序，而是简单复用此处每个元素，
+         并且确保它在特定索引下显示已被渲染过的每个元素。key 的作用主要是为了高效的更新虚拟DOM。
+       -->
+</body>
+</html>
